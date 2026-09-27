@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Springbored</h1>
+    <span class="status"><span class="dot"></span><span id="statusText">Off</span></span>
+  </header>
+
+  <figure class="timeline" id="timeline" data-mode="skip">
+    <span class="tail-label" id="tailLabel" aria-hidden="true">last 5s</span>
+    <div class="track" aria-hidden="true">
+      <div class="tail"></div>
+      <div class="fill"></div>
+      <div class="head"></div>
+    </div>
+    <figcaption id="caption"></figcaption>
+  </figure>
+
+  <button id="toggle" class="power" type="button">
+    <svg class="icon icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+    <svg class="icon icon-stop" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2.5"/></svg>
+    <span id="toggleText">Start skipping</span>
+  </button>
+  <p class="note" id="note" role="status"></p>
+
+  <section class="settings" aria-label="Settings">
+    <div class="row">
+      <span class="label" id="modeLabel">How to skip</span>
+      <div class="segmented" role="radiogroup" aria-labelledby="modeLabel">
+        <label><input type="radio" name="mode" value="skip"><span>Jump</span></label>
+        <label><input type="radio" name="mode" value="fast"><span>16x speed</span></label>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="label" id="leadLabel">Play the last</span>
+      <div class="stepper" role="group" aria-labelledby="leadLabel">
+        <button type="button" id="less" aria-label="Fewer seconds">−</button>
+        <output id="lead" aria-live="polite">5s</output>
+        <button type="button" id="more" aria-label="More seconds">+</button>
+      </div>
+    </div>
+
+    <label class="row">
+      <span class="label">Open the next item when done</span>
+      <input type="checkbox" id="autoNext" class="switch" role="switch">
+    </label>
+  </section>
+
+  <p class="hint">Videos not getting marked complete? Switch to 16x speed.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
