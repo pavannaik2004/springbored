@@ -11,8 +11,8 @@ A Chrome/Edge extension for Infosys Springboard (`infyspringboard.onwingspan.com
 1. Open `chrome://extensions` (or `edge://extensions`).
 2. Turn on **Developer mode**.
 3. Click **Load unpacked** and select this folder.
-4. Open a course video on Springboard, click the extension's toolbar icon, and press the big green **▶ Start** button. The page reloads and skipping begins.
-5. Press the red **■ Stop** button to turn it off (takes effect immediately, no reload).
+4. Open a course video on Springboard, click the extension's toolbar icon, and press the big blue **▶ Start skipping** button. The page reloads and skipping begins.
+5. Press the orange **■ Stop skipping** button to turn it off (takes effect immediately, no reload).
 
 A small ⏭ status label in the bottom-left corner shows what the extension is doing.
 

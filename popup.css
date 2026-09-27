@@ -4,13 +4,14 @@
   --ink: #14213d;
   --muted: #5b6680;
   --line: #dce3f0;
-  --blue: #2457e6;
-  --blue-soft: #dce6ff;
-  --red: #d93a4a;
-  --red-soft: #fde3e6;
+  --blue: #007cc3;
+  --blue-soft: #d4eaf7;
+  --orange: #f15922;
+  --orange-ink: #c8461a;
+  --orange-soft: #fde2d6;
   --green: #1f9d55;
-  --start: #2457e6;
-  --stop: #c92a3c;
+  --start: #007cc3;
+  --stop: #f15922;
   color-scheme: light dark;
 }
 
@@ -21,13 +22,14 @@
     --ink: #e6ecf7;
     --muted: #9aa6bd;
     --line: #2a3650;
-    --blue: #5b8bff;
-    --blue-soft: #22325c;
-    --red: #ff6b78;
-    --red-soft: #4a2330;
+    --blue: #2a9ae0;
+    --blue-soft: #123a55;
+    --orange: #f15922;
+    --orange-ink: #ff7a45;
+    --orange-soft: #4a2616;
     --green: #4ade80;
-    --start: #2f5fe0;
-    --stop: #c92a3c;
+    --start: #007cc3;
+    --stop: #f15922;
   }
 }
 
@@ -52,6 +54,9 @@ body {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
   font: 600 15px/1.2 "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
   letter-spacing: -0.01em;
@@ -75,6 +80,8 @@ h1 {
 .running .status { color: var(--green); }
 .running .dot { background: var(--green); }
 
+.logo { display: block; }
+
 /* ---------- timeline illustration ---------- */
 
 .timeline {
@@ -95,7 +102,7 @@ h1 {
 .tail-label {
   display: block;
   margin-bottom: 6px;
-  color: var(--blue);
+  color: var(--orange-ink);
   font-size: 11px;
   font-weight: 600;
   text-align: right;
@@ -106,8 +113,8 @@ h1 {
   inset: 0 0 0 auto;
   width: 16%;
   border-radius: 0 3px 3px 0;
-  background: var(--blue-soft);
-  box-shadow: inset 2px 0 0 var(--blue);
+  background: var(--orange-soft);
+  box-shadow: inset 2px 0 0 var(--orange);
 }
 
 .fill {
@@ -183,7 +190,7 @@ h1 {
   background: var(--stop);
   box-shadow: 0 6px 16px -8px var(--stop);
 }
-.running .power:focus-visible { outline-color: var(--red-soft); }
+.running .power:focus-visible { outline-color: var(--orange-soft); }
 
 .icon { width: 20px; height: 20px; fill: currentColor; }
 .icon-stop, .running .icon-play { display: none; }
