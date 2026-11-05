@@ -22,7 +22,7 @@
   const IS_TOP = window === window.top;
   const MSG = '__springbored';
   const FAST_RATE = 16; // Chrome's maximum playbackRate
-  const DEFAULTS = { enabled: false, mode: 'skip', leadSeconds: 5, autoNext: true };
+  const DEFAULTS = { enabled: false, mode: 'skip', leadSeconds: 1, autoNext: true };
 
   let settings = { ...DEFAULTS };
   const videoState = new WeakMap();
